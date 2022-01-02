@@ -1,0 +1,163 @@
+header {
+  padding-top: 17px;
+}
+
+.home__main-navigation {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  li {
+    &:first-child {
+      padding-right: 77px;
+    }
+    &:nth-child(2) {
+      padding-right: 65px;
+    }
+    &:nth-child(3) {
+      padding-right: 67px;
+    }
+    &:nth-child(4) {
+      padding-right: 32px;
+    }
+    &:nth-child(5) {
+      padding-right: 28px;
+    }
+    &:nth-child(6) {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+.home__add-navigation {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+  a {
+    font-family: "Euclid Circular A";
+    font-size: 18px;
+    line-height: 23px;
+    color: #2b2e34;
+    display: flex;
+    align-items: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    &:first-child {
+      padding-right: 167px;
+      a {
+        img {
+          padding-right: 15px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      padding-right: 167px;
+      a {
+        img {
+          padding-right: 16px;
+        }
+      }
+    }
+    &:nth-child(3) {
+      padding-right: 167px;
+      a {
+        img {
+          padding-right: 12px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    &:nth-child(4) {
+      padding-right: 166px;
+      a {
+        img {
+          padding-right: 13px;
+        }
+      }
+    }
+    &:nth-child(5) {
+      a {
+        img {
+          padding-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+.home__searchbar {
+  input {
+    width: 851px;
+    height: 54px;
+    border: none;
+    padding-left: 66px;
+    background: url("../assets/images/magnifier.svg") no-repeat top 15px left
+        31px,
+      #f6f6f6;
+    font-family: "Euclid Circular A";
+    font-size: 15px;
+    line-height: 19px;
+    color: #73737b;
+  }
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  div {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    p {
+      padding-left: 5px;
+      font-family: "Euclid Circular A";
+      font-size: 13px;
+      line-height: 16px;
+      color: #555555;
+    }
+  }
+}
+
+.home__banner {
+  height: 294px;
+  background: url("../assets/images/refrigerator.png") no-repeat top left 500px,
+    linear-gradient(91.79deg, #1dbcd1 16.94%, #3ddcf1 83.14%);
+  .app__container {
+    display: flex;
+  }
+  .home__banner-text {
+    max-width: 580px;
+    padding-top: 82px;
+    font-family: "Euclid Circular A";
+    color: #fff;
+    p {
+      &:first-child {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 53px;
+        padding-bottom: 22px;
+        letter-spacing: 0.2px;
+      }
+      &:nth-child(2) {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+  }
+
+  a {
+    width: 282px;
+    height: 78px;
+    background: url("../assets/images/ad_next.svg") no-repeat top 31px left 50px,
+      #fff;
+    color: #2b2e34;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 27px 0 0 128px;
+    margin: 111px 0 0 657px;
+    letter-spacing: 0.2px;
+  }
+}

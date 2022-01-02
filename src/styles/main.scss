@@ -1,0 +1,30 @@
+@import "variables";
+@import "home";
+@import "fonts/euclidCircularA";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $main-background;
+  font-family: "Euclid Circular A";
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.app__container {
+  max-width: 1540px;
+  margin: auto;
+}
