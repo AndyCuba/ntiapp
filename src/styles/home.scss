@@ -229,11 +229,12 @@ header {
           border-left: 1.7px solid $active-text;
           border-bottom: 1.7px solid $active-text;
           transform: rotate(-45deg);
-          transition: 0.5s linear;
+          transition: 0.2s ease-in;
         }
       }
     }
     > form {
+      transition: all 0.2s;
       padding-bottom: 49px;
       li {
         margin-bottom: 15px;
@@ -773,5 +774,19 @@ footer {
         text-decoration: underline;
       }
     }
+  }
+}
+
+.hidden {
+  overflow: hidden;
+  padding-bottom: 0 !important;
+  height: 0;
+  opacity: 0;
+}
+
+.turned-over {
+  &::after {
+    top: 10px !important;
+    transform: rotate(135deg) !important;
   }
 }
