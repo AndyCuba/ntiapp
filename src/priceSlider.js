@@ -1,4 +1,4 @@
-window.onload = () => {
+function createSlider() {
     const priceSlider = document.getElementById('price-slider');
     const firstThumb = document.getElementById('first-thumb');
     const secondThumb = document.getElementById('second-thumb');
@@ -102,3 +102,6 @@ window.onload = () => {
     document.addEventListener('touchend', mouseUp);
     
 };
+
+
+export default createSlider;
