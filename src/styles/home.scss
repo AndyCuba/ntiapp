@@ -162,6 +162,9 @@ header {
   padding-bottom: 67px;
   a {
     color: #858a93;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   span {
     padding: 0 6px;
@@ -854,13 +857,18 @@ footer {
   }
 }
 
+.home__mobile-menu {
+  display: none;
+}
+
 body {
   @media (max-width: 1900px) {
+    position: relative;
     .app__container {
       max-width: 373px;
     }
     .home__searchbar {
-      margin-left: -22px;
+      margin-left: -21.5px;
       input {
         width: 415px;
         height: 54px;
@@ -1212,6 +1220,183 @@ body {
           padding: 0 0 30px 0;
           &:nth-child(3) {
             padding-bottom: 65px;
+          }
+        }
+      }
+    }
+
+    .open__mobile-menu {
+      left: 0 !important;
+    }
+
+    .home__mobile-menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -500px;
+      width: 100%;
+      z-index: 10;
+      background: $add-background;
+      transition: left 0.5s ease-in-out;
+      overflow-x: hidden;
+      .app__container {
+        margin: auto;
+        max-width: 378px;
+        padding-top: 15px;
+      }
+
+      #logo {
+        > img {
+          width: 24px;
+          height: 37px;
+        }
+        > div {
+          padding-left: 8px;
+          > p {
+            display: none;
+          }
+          > img {
+            width: 150px;
+            height: 20px;
+            object-fit: contain;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      #close-mobile-menu {
+        margin-right: 5px;
+        img {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .home__mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 65px;
+      }
+
+      .home__mobile-menu-categories {
+        padding-bottom: 20px;
+        > ul > li {
+          color: $active-text;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          margin-bottom: 23px;
+          padding-bottom: 24px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+          &:first-child {
+            > p {
+              padding-left: 40px;
+              position: relative;
+              margin-bottom: 29px;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 25px;
+                height: 18px;
+                background: url("../assets/images/heating-mobile.svg") no-repeat
+                  center/cover;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                border-left: 1.7px solid $active-text;
+                border-bottom: 1.7px solid $active-text;
+                transform: rotate(-45deg);
+                transition: 0.2s ease-in;
+                width: 8px;
+                height: 8px;
+              }
+            }
+
+            li {
+              padding-bottom: 25px;
+              &:last-child {
+                padding-bottom: 20px;
+              }
+            }
+
+            a {
+              font-size: 14px;
+              line-height: 18px;
+              color: $active-text;
+            }
+          }
+
+          &:nth-child(2) {
+            > p {
+              padding-left: 42px;
+              position: relative;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 25px;
+                height: 18px;
+                background: url("../assets/images/tap-mobile.svg") no-repeat
+                  center/cover;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            > p {
+              padding-left: 42px;
+              position: relative;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: 0;
+                width: 21px;
+                height: 21px;
+                background: url("../assets/images/hand-sanitizer-mobile.svg")
+                  no-repeat center/cover;
+              }
+            }
+          }
+
+          &:nth-child(4) {
+            > p {
+              padding-left: 42px;
+              position: relative;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 21px;
+                height: 21px;
+                background: url("../assets/images/shower-mobile.svg") no-repeat
+                  center/cover;
+              }
+            }
+          }
+        }
+      }
+
+      .home__mobile-menu-info {
+        li {
+          padding-bottom: 30px;
+          a {
+            font-size: 14px;
+            line-height: 18px;
+            color: $active-text;
+          }
+
+          &:last-child {
+            padding-bottom: 74px;
           }
         }
       }
