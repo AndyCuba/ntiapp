@@ -1009,9 +1009,9 @@ body {
       margin-right: 0;
       position: absolute;
       top: 0;
-      left: -500px;
+      left: -250%;
       z-index: 5;
-      transition: all 0.5s;
+      transition: all 1s;
       #filter-reset {
         order: 9;
         align-self: center;
@@ -1233,7 +1233,7 @@ body {
       display: block;
       position: absolute;
       top: 0;
-      left: -500px;
+      left: -100%;
       width: 100%;
       z-index: 10;
       background: $add-background;
