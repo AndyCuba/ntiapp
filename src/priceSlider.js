@@ -4,6 +4,7 @@ window.onload = () => {
     const secondThumb = document.getElementById('second-thumb');
     const sliderFiller = document.getElementById('slider-filler');
 
+    const isMobile = document.body.offsetWidth < 1000 ? true : false;
     const sliderOffsetWidth = priceSlider.offsetWidth;
     let firstThumbLeft = firstThumb.offsetLeft;
     let secondThumbLeft = secondThumb.offsetLeft;
@@ -18,11 +19,12 @@ window.onload = () => {
         const offset = firstThumb.offsetLeft;
         
         if (offset <= maxPos && offset >= minPos) {
+            const clientX = isMobile ? e.touches[0].clientX : e.clientX;
 
             // add 2 to hide filler edge behind thumb
-            sliderFiller.style.left = firstThumbLeft + e.clientX - startX + 2 + 'px';
+            sliderFiller.style.left = firstThumbLeft + clientX - startX + 2 + 'px';
             sliderFiller.style.width = secondThumbLeft - offset + 'px';
-            firstThumb.style.left = firstThumbLeft + e.clientX - startX + 'px';
+            firstThumb.style.left = firstThumbLeft + clientX - startX + 'px';
 
         } else if (offset > maxPos) {
 
@@ -44,10 +46,11 @@ window.onload = () => {
         const offset = secondThumb.offsetLeft;
         
         if (offset <= maxPos && offset >= minPos) {
+            const clientX = isMobile ? e.touches[0].clientX : e.clientX;
 
             // add 2 to hide filler edge behind thumb
-            sliderFiller.style.width = secondThumbLeft + e.clientX - startX - sliderFiller.offsetLeft + 2 + 'px';
-            secondThumb.style.left = secondThumbLeft + e.clientX - startX + 'px';
+            sliderFiller.style.width = secondThumbLeft + clientX - startX - sliderFiller.offsetLeft + 2 + 'px';
+            secondThumb.style.left = secondThumbLeft + clientX - startX + 'px';
 
         } else if (offset > maxPos) {
 
@@ -85,13 +88,13 @@ window.onload = () => {
 
     firstThumb.addEventListener('touchstart', (e) => {
         firstThumbLeft = firstThumb.offsetLeft;
-        startX = e.clientX;
+        startX = e.touches[0].clientX;
         document.addEventListener('touchmove', handleFirstThumbMove);
     });
 
     secondThumb.addEventListener('touchstart', (e) => {
         secondThumbLeft = secondThumb.offsetLeft;
-        startX = e.clientX;
+        startX = e.touches[0].clientX;
         document.addEventListener('touchmove', handleSecondThumbMove);
     });
 
